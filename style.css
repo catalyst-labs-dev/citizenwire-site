@@ -1,0 +1,7 @@
+*{box-sizing:border-box}body{margin:0;font:18px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#111;background:#fff}
+.w{max-width:42rem;margin:0 auto;padding:1rem}header{border-bottom:3px solid #29603F}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:#111;font:700 1.3rem/1 "Courier New",Courier,monospace;letter-spacing:.08em}
+.sq{width:1.1rem;height:1.1rem;background:#29603F;display:inline-block}
+nav a{margin-right:1rem;color:#29603F;font-weight:600}a{color:#29603F}
+.tag{font-family:"Courier New",monospace;font-weight:700}h1,h2{line-height:1.25}
+.note{border:2px dashed #29603F;padding:1rem;font-weight:600}footer{border-top:1px solid #ccc;font-size:.9rem;color:#333;margin-top:2rem}
