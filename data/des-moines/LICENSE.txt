@@ -1,0 +1,8 @@
+Citizen Wire — Des Moines City Council data
+Licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
+https://creativecommons.org/licenses/by/4.0/
+
+Attribution: "Data: Citizen Wire (citizenwire.org), CC BY 4.0"
+
+The license covers Citizen Wire's compiled data and text. The underlying government records
+(minutes, agendas, packets) are public records of the City of Des Moines.

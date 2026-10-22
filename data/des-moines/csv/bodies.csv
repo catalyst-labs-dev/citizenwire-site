@@ -1,0 +1,2 @@
+body_id,name,kind,jurisdiction_id,jurisdiction_name,ocd_division_id,fips,timezone,portal_url
+ia-des-moines-council,Des Moines City Council,council,ia-des-moines,Des Moines,ocd-division/country:us/state:ia/place:des_moines,1921000,America/Chicago,https://dsmcity.primegov.com/public/portal
