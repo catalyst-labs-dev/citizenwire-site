@@ -296,3 +296,6 @@ footer{padding-bottom:calc(var(--s7) + env(safe-area-inset-bottom) + 48px)}
 .vc{background:var(--panel,#F3EEE2);border:0;border-radius:6px;padding:var(--s3);margin:0 0 var(--s2)}
 .vc.av-n{border-left:3px solid var(--g)}
 .rt{margin:var(--s3) 0}.rt>summary{cursor:pointer;font-weight:600;padding:var(--s2) 0}
+.bxh{font-size:15px;margin:0 0 6px}
+.wtm-c{color:inherit}
+.cons ol{margin:6px 0 0;padding-left:1.2em}
