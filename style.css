@@ -293,3 +293,6 @@ footer{padding-bottom:calc(var(--s7) + env(safe-area-inset-bottom) + 48px)}
 .brief .bsrc{margin:12px 0 0;font-size:14px}
 .hsm{padding-top:var(--s4)!important;padding-bottom:var(--s3)!important}.hsm h1{font-size:clamp(20px,5.4vw,28px);margin:0 0 6px}
 .brief .bx table{width:100%}.brief .bx td,.brief .bx th{padding:6px 4px}@media(max-width:360px){.brief .bx table{font-size:13px}.brief{padding:12px!important}}
+.vc{background:var(--panel,#F3EEE2);border:0;border-radius:6px;padding:var(--s3);margin:0 0 var(--s2)}
+.vc.av-n{border-left:3px solid var(--g)}
+.rt{margin:var(--s3) 0}.rt>summary{cursor:pointer;font-weight:600;padding:var(--s2) 0}
