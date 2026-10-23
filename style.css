@@ -296,6 +296,18 @@ footer{padding-bottom:calc(var(--s7) + env(safe-area-inset-bottom) + 48px)}
 .rlist{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
 .rrow{display:flex;flex-direction:column;gap:2px;padding:12px 0;border-bottom:1px solid var(--line)}
 .rrow a{text-decoration:none;color:var(--ink)}.rrow a:hover .r-t{color:var(--g);text-decoration:underline}
+/* Routine approvals (home): quieter secondary group under Recent */
+.rt-sec{margin-top:var(--s5);padding-top:var(--s4);border-top:1px solid var(--line)}
+.rt-h{font-size:1rem;font-weight:600;color:var(--mut);margin:0 0 var(--s2);letter-spacing:0}
+.rt-list .r-t{font-weight:400;font-size:14px;color:var(--mut)}
+.rt-list .rrow a:hover .r-t{color:var(--g)}
+.btn.quiet-btn{background:transparent;color:var(--mut);border:1px solid var(--line);font-weight:500}
+.btn.quiet-btn:hover{border-color:var(--mut);color:var(--ink)}
+html[data-theme="night"] .rt-h{color:#B8C9BE}
+html[data-theme="night"] .rt-list .r-t{color:#B8C9BE}
+html[data-theme="night"] .btn.quiet-btn{color:#B8C9BE;border-color:var(--panelline)}
+html[data-theme="night"] .btn.quiet-btn:hover{color:#F3EEE2;border-color:#F3EEE2}
+
 .r-t{font-weight:600;font-size:16px;line-height:1.35}
 @media(min-width:640px){.rrow{flex-direction:row;align-items:baseline;justify-content:space-between;gap:16px}.rrow .meta{flex:0 1 auto;text-align:right;max-width:42%}}
 @media(max-width:480px){.r-t{font-size:15px}.rrow{padding:10px 0}}
