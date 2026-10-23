@@ -1,5 +1,5 @@
 :root{--g:#29603F;--ink:#111;--mut:#4a4a4a;--line:#e3e3e3;--bg:#fff;--soft:#f5f7f5}
-@media(prefers-color-scheme:dark){:root{--g:#7fc49a;--ink:#f2f2f2;--mut:#bdbdbd;--line:#333;--bg:#121212;--soft:#1c1f1d}}
+/* soft dark replaced by cream-on-black night mode (Catherine Oct 22) — see end of file */
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
 h1,h2,h3,.wm{font-family:"DejaVu Sans Mono",monospace;font-weight:700;letter-spacing:.02em}
 a{color:var(--g)}.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
@@ -14,7 +14,6 @@ section{padding:28px 0;border-bottom:1px solid var(--line)}h1{font-size:28px;lin
 .card{border:1px solid var(--line);border-radius:8px;padding:16px;margin:12px 0;background:var(--bg)}.card h3{font-size:16px;margin:6px 0}
 .meta{color:var(--mut);font-size:14px}.chips{display:flex;flex-wrap:wrap;gap:10px}.chip{border:1.5px solid var(--g);color:var(--g);border-radius:999px;padding:6px 14px;text-decoration:none;font-weight:600}
 .btn{display:inline-block;background:var(--g);color:#fff;padding:10px 16px;border-radius:6px;text-decoration:none;font-weight:700}
-@media(prefers-color-scheme:dark){.btn{color:#111}}
 table{width:100%;border-collapse:collapse;font-size:15px}td,th{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line)}
 .two{display:grid;gap:16px}.box{background:var(--soft);border-radius:8px;padding:16px}
 footer{padding:28px 0;color:var(--mut);font-size:14px}
@@ -49,8 +48,7 @@ td{white-space:nowrap}
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{font-size:1.0625rem}
 .wrap{padding-left:max(1rem,env(safe-area-inset-left));padding-right:max(1rem,env(safe-area-inset-right))}
-header.top{position:-webkit-sticky;position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top)}
-@media(prefers-color-scheme:dark){header.top{background:var(--bg)}}
+header.top{position:-webkit-sticky;position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top)}
 header.top .bar{display:flex;flex-wrap:nowrap;align-items:center;gap:clamp(.5rem,2.5vw,1.25rem);padding-top:.4rem;padding-bottom:.4rem;min-height:3rem;max-height:3.5rem}
 header.top .brand{flex:0 0 auto;display:flex;align-items:center;gap:.4rem;min-width:0}
 header.top .brand img{width:30px;height:30px;flex:0 0 auto}
@@ -70,8 +68,7 @@ nav.menu a{flex:0 0 auto;white-space:nowrap;color:var(--ink);text-decoration:non
 @media(max-width:21rem){header.top .wm{display:none}}
 @media(max-width:55.99rem){nav.menu,.jump{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent);padding-right:1.5rem}}
 .crumb{margin-bottom:.75rem}
-.jump{display:flex;flex-wrap:nowrap;align-items:center;gap:.5rem;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:.5rem 0;border-bottom:1px solid var(--line);background:#fff;font-size:.875rem}
-@media(prefers-color-scheme:dark){.jump{background:var(--bg)}}
+.jump{display:flex;flex-wrap:nowrap;align-items:center;gap:.5rem;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:.5rem 0;border-bottom:1px solid var(--line);background:var(--bg);font-size:.875rem}
 .jump::-webkit-scrollbar{display:none}
 .jump a{flex:0 0 auto;white-space:nowrap;color:var(--ink);font-weight:600;text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:.3rem .75rem}
 .jump .jl{flex:0 0 auto;white-space:nowrap;font:700 .6875rem "DejaVu Sans Mono",monospace;color:var(--g);text-transform:uppercase;letter-spacing:.06em}
@@ -158,11 +155,11 @@ footer{padding:var(--s6) 0 var(--s7);border-top:1px solid var(--line);margin-top
 .contest .cands{margin:var(--s3) 0;padding:0;list-style:none}.contest .cands li{padding:var(--s2) 0;border-top:1px solid var(--panelline);overflow-wrap:anywhere}.contest .cands li:last-child{border-bottom:1px solid var(--panelline)}
 @media(max-width:480px){.contest{padding:var(--s5) var(--s4)}}
 /* two-row header: bigger brand, links on own row */
-header.top .bar{display:grid;grid-template-columns:auto auto minmax(0,1fr) auto;width:100%;box-sizing:border-box;grid-template-areas:"brand draft . search" "menu menu menu menu";align-items:center;gap:0 .75rem;max-height:none;min-height:0;padding-top:.6rem;padding-bottom:0}
+header.top .bar{display:grid;grid-template-columns:auto auto minmax(0,1fr) auto auto;width:100%;box-sizing:border-box;grid-template-areas:"brand draft . theme search" "menu menu menu menu menu";align-items:center;gap:0 .75rem;max-height:none;min-height:0;padding-top:.6rem;padding-bottom:0}
 header.top .brand{grid-area:brand;gap:.6rem}
 header.top .brand img{width:30px;height:30px}
 header.top .wm{display:inline!important;font-size:19px;letter-spacing:.03em}
-header.top .draft{grid-area:draft}header.top .sbox{grid-area:search;justify-self:end}
+header.top .draft{grid-area:draft}header.top .theme-btn{grid-area:theme;justify-self:end}header.top .sbox{grid-area:search;justify-self:end}
 header.top .menu{grid-area:menu;margin-top:.45rem;border-top:1px solid var(--line);gap:clamp(1rem,5vw,2rem);font-size:clamp(.875rem,3.9vw,1rem);padding-top:.1rem;padding-bottom:.1rem}
 @media(min-width:56rem){header.top .menu{-webkit-mask-image:none;mask-image:none}}
 @media(max-width:21rem){header.top .wm{font-size:19px}header.top .bar{gap:0 .5rem}}
@@ -176,9 +173,8 @@ header.top .menu{min-width:0;width:100%;box-sizing:border-box}header.top .bar>*{
 .ocard{background:#fff;border:1px solid var(--panelline);border-radius:var(--r);padding:var(--s4);display:flex;flex-direction:column;gap:var(--s1);min-width:0;font-size:15px;line-height:1.4}
 .ocard .oname{font-size:16px;color:var(--ink)}.ocard .oseat{font:700 12px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin-bottom:var(--s1)}
 .ocard a{overflow-wrap:anywhere;word-break:break-word}
-@media(prefers-color-scheme:dark){.ocard{background:var(--bg)}}
 /* header v4: proportion + rhythm pass (Oct 20) */
-header.top .bar{grid-template-columns:auto auto minmax(0,1fr) auto;column-gap:.75rem;padding-top:.375rem;padding-bottom:0}
+header.top .bar{grid-template-columns:auto auto minmax(0,1fr) auto auto;column-gap:.75rem;padding-top:.375rem;padding-bottom:0}
 header.top .brand{gap:.5rem;min-height:44px}
 header.top .brand img{width:30px;height:30px}
 header.top .wm{font-size:19px;line-height:1;letter-spacing:.04em}
@@ -193,7 +189,7 @@ header.top a:focus-visible,.sbox summary:focus-visible,.search input:focus-visib
 @media(max-width:55.99rem){header.top .menu{-webkit-mask-image:none;mask-image:none;padding-right:0}}
 @media(max-width:22rem){header.top .menu{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent);padding-right:1.5rem;gap:1rem}}
 @media(min-width:56rem){
- header.top .bar{grid-template-areas:"brand draft menu search";grid-template-columns:auto auto minmax(0,1fr) auto;column-gap:1.25rem;padding-top:.625rem;padding-bottom:.625rem}
+ header.top .bar{grid-template-areas:"brand draft menu theme search";grid-template-columns:auto auto minmax(0,1fr) auto auto;column-gap:1.25rem;padding-top:.625rem;padding-bottom:.625rem}
  header.top .wm{font-size:19px}header.top .brand img{width:30px;height:30px}
  header.top .menu{margin:0;border-top:0;justify-content:flex-end;gap:1.75rem;width:auto}
  header.top .sbox{display:none}header.top .search.dsk{display:block;grid-area:search;position:relative;width:15rem;min-width:0}
@@ -309,3 +305,52 @@ header.top .brand{gap:.5rem}
 header.top .brand img,.brand img{width:30px;height:30px}
 header.top .wm,.wm{font-size:19px;line-height:1;letter-spacing:.04em}
 @media(min-width:56rem){header.top .brand img{width:30px;height:30px}header.top .wm{font-size:19px}}
+
+
+/* ===== Official night mode: cream panels on black (Catherine Oct 22 ~7:32 PM CT) ===== */
+@media(prefers-color-scheme:dark){
+ :root{--g:#7fc49a;--ink:#e8e8e8;--mut:#a8a8a8;--line:#2a2a2a;--bg:#000;--soft:#F3EEE2;--panel:#F3EEE2;--panelline:#E6DFCF;color-scheme:dark}
+}
+html[data-theme="day"]{--g:#29603F;--ink:#111;--mut:#4a4a4a;--line:#e3e3e3;--bg:#fff;--soft:#f5f7f5;--panel:#f5f7f5;--panelline:#e3e3e3;color-scheme:light}
+html[data-theme="night"]{--g:#7fc49a;--ink:#e8e8e8;--mut:#a8a8a8;--line:#2a2a2a;--bg:#000;--soft:#F3EEE2;--panel:#F3EEE2;--panelline:#E6DFCF;color-scheme:dark}
+
+.theme-btn{appearance:none;-webkit-appearance:none;flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px;padding:0 .7rem;margin:0;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--ink);font:700 12px/1 var(--mono),ui-monospace,monospace;letter-spacing:.04em;text-transform:uppercase;cursor:pointer}
+.theme-btn:hover{border-color:var(--g);color:var(--g)}
+.theme-btn:focus-visible{outline:2px solid var(--g);outline-offset:2px}
+@media(max-width:22rem){.theme-btn{min-width:40px;padding:0 .55rem;font-size:11px}}
+
+html[data-theme="night"] :is(.lead,.box,.card,.contest,.brief,.vc,.nextd,.wtm,.ocard,.pcard,.galert,.athanks,.sres,.sbox[open] .search){background:var(--panel);color:#111}
+html[data-theme="night"] :is(.lead,.box,.card,.contest,.brief,.vc,.nextd,.wtm,.ocard,.pcard,.galert,.athanks,.sres) :is(h1,h2,h3,.sub,.big,.big2,.tally,.oname,.r-t,.bxh){color:#111}
+html[data-theme="night"] :is(.lead,.box,.card,.contest,.brief,.vc,.nextd,.wtm,.ocard,.pcard) :is(.meta,.quiet,.bmeta,.wtm1,.oseat),html[data-theme="night"] .brief .wtm1{color:#4a4740}
+html[data-theme="night"] :is(.lead,.box,.card,.contest,.brief,.vc,.nextd,.wtm,.ocard,.pcard,.sres) a{color:#29603F}
+html[data-theme="night"] :is(.lead,.box,.card,.contest,.brief,.vc,.nextd,.wtm,.ocard,.pcard,.sres) a:hover{color:#1F4D3A}
+html[data-theme="night"] .card h3 a{color:#111}html[data-theme="night"] .card h3 a:hover{color:#29603F}
+html[data-theme="night"] .search input,html[data-theme="night"] .aem,html[data-theme="night"] .eowrap [data-form] input[type=email]{background:var(--panel)!important;color:#111!important;border-color:#E6DFCF!important}
+html[data-theme="night"] .btn,html[data-theme="night"] button.chip[aria-pressed="true"]{color:#111}
+html[data-theme="night"] .ck{border-color:#E6DFCF;background:var(--panel);color:#111}
+html[data-theme="night"] .soon{background:#fff4d6;color:#4a3700}
+html[data-theme="night"] table{background:var(--panel);color:#111}
+html[data-theme="night"] th{color:#4a4740;background:var(--panel)}
+html[data-theme="night"] .contest>h3:first-child{background:#E6DFCF;color:#111}
+html[data-theme="night"] .two>.box.quiet{background:var(--bg)!important;color:var(--ink)}
+html[data-theme="night"] .two>.box.quiet :is(h1,h2,h3){color:var(--ink)}
+html[data-theme="night"] .two>.box.quiet a{color:var(--g)}
+html[data-theme="night"] .label{color:var(--g)}
+
+@media(prefers-color-scheme:dark){
+ html:not([data-theme="day"]) :is(.lead,.box,.card,.contest,.brief,.vc,.nextd,.wtm,.ocard,.pcard,.galert,.athanks,.sres,.sbox[open] .search){background:var(--panel);color:#111}
+ html:not([data-theme="day"]) :is(.lead,.box,.card,.contest,.brief,.vc,.nextd,.wtm,.ocard,.pcard,.galert,.athanks,.sres) :is(h1,h2,h3,.sub,.big,.big2,.tally,.oname,.r-t,.bxh){color:#111}
+ html:not([data-theme="day"]) :is(.lead,.box,.card,.contest,.brief,.vc,.nextd,.wtm,.ocard,.pcard) :is(.meta,.quiet,.bmeta,.wtm1,.oseat){color:#4a4740}
+ html:not([data-theme="day"]) :is(.lead,.box,.card,.contest,.brief,.vc,.nextd,.wtm,.ocard,.pcard,.sres) a{color:#29603F}
+ html:not([data-theme="day"]) :is(.lead,.box,.card,.contest,.brief,.vc,.nextd,.wtm,.ocard,.pcard,.sres) a:hover{color:#1F4D3A}
+ html:not([data-theme="day"]) .card h3 a{color:#111}html:not([data-theme="day"]) .card h3 a:hover{color:#29603F}
+ html:not([data-theme="day"]) .search input,html:not([data-theme="day"]) .aem,html:not([data-theme="day"]) .eowrap [data-form] input[type=email]{background:var(--panel)!important;color:#111!important;border-color:#E6DFCF!important}
+ html:not([data-theme="day"]) .btn,html:not([data-theme="day"]) button.chip[aria-pressed="true"]{color:#111}
+ html:not([data-theme="day"]) .ck{border-color:#E6DFCF;background:var(--panel);color:#111}
+ html:not([data-theme="day"]) table{background:var(--panel);color:#111}
+ html:not([data-theme="day"]) th{color:#4a4740;background:var(--panel)}
+ html:not([data-theme="day"]) .contest>h3:first-child{background:#E6DFCF;color:#111}
+ html:not([data-theme="day"]) .two>.box.quiet{background:var(--bg)!important;color:var(--ink)}
+ html:not([data-theme="day"]) .two>.box.quiet :is(h1,h2,h3){color:var(--ink)}
+ html:not([data-theme="day"]) .two>.box.quiet a{color:var(--g)}
+}
