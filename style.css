@@ -145,11 +145,7 @@ a:hover{text-decoration-thickness:2px}
 footer{padding:var(--s6) 0 var(--s7);border-top:1px solid var(--line);margin-top:var(--s6)}
 .facts li+li::before{content:none}.facts{gap:var(--s1) var(--s5)}
 .lead+section.two{padding-top:0}.two>.box{border:1px solid var(--panelline)!important;padding:var(--s5)!important}.two>.box.quiet{background:var(--bg)!important}.card h3 a{color:var(--ink)}.card h3 a:hover{color:var(--g)}
-/* Variant B: cream page, white cards/tables */
-:root{--bg:#FBF8F1;--panel:#F3EEE2;--panelline:#E6DFCF;--line:#E6DFCF;--mut:#4a4740}
-header.top,.jump{background:#FBF8F1}
-.card,table{background:#fff}
-@media(prefers-color-scheme:dark){:root{--bg:#121212;--panel:#1c1f1d;--panelline:#333;--line:#333;--mut:#bdbdbd}header.top,.jump{background:var(--bg)}.card,table{background:var(--bg)}}
+/* Stay white (Catherine Oct 22): no cream page restyle. Soft mint panels via --panel. */
 /* key panels: 3px green rule */
 .lead#vote,.lead#impact,.lead#act{border-left:3px solid var(--g);border-radius:0 var(--r) var(--r) 0}
 /* merge fixes: narrow + 200% text */
@@ -299,3 +295,11 @@ footer{padding-bottom:calc(var(--s7) + env(safe-area-inset-bottom) + 48px)}
 .bxh{font-size:15px;margin:0 0 6px}
 .wtm-c{color:inherit}
 .cons ol{margin:6px 0 0;padding-left:1.2em}
+
+/* Home lean recent list */
+.rlist{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.rrow{display:flex;flex-direction:column;gap:2px;padding:12px 0;border-bottom:1px solid var(--line)}
+.rrow a{text-decoration:none;color:var(--ink)}.rrow a:hover .r-t{color:var(--g);text-decoration:underline}
+.r-t{font-weight:600;font-size:16px;line-height:1.35}
+@media(min-width:640px){.rrow{flex-direction:row;align-items:baseline;justify-content:space-between;gap:16px}.rrow .meta{flex:0 1 auto;text-align:right;max-width:42%}}
+@media(max-width:480px){.r-t{font-size:15px}.rrow{padding:10px 0}}
