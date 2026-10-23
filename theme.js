@@ -7,11 +7,11 @@
   }
   function sync(){
     var n=cur()==='night';
+    var label=n?'Switch to day mode':'Switch to night mode';
     document.querySelectorAll('[data-theme-toggle]').forEach(function(b){
       b.setAttribute('aria-pressed',n?'true':'false');
-      b.textContent=n?'Day':'Night';
-      b.title=n?'Switch to day mode':'Switch to night mode';
-      b.setAttribute('aria-label',n?'Switch to day mode':'Switch to night mode');
+      b.title=label;
+      b.setAttribute('aria-label',label);
     });
   }
   document.addEventListener('click',function(e){
