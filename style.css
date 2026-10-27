@@ -381,3 +381,6 @@ html[data-theme="night"] .badge{color:var(--g);border-color:var(--g)}
  html:not([data-theme="day"]) .chip{color:var(--g);border-color:var(--g)}
  html:not([data-theme="day"]) .badge{color:var(--g);border-color:var(--g)}
 }
+
+/* 320px: keep "Show earlier routine approvals" on one line */
+@media (max-width:359px){#rt-more{padding:0 12px;font-size:.9375rem;white-space:nowrap}}
