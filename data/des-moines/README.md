@@ -1,27 +1,27 @@
-# Des Moines City Council votes, v2026.10.22
+# Des Moines City Council votes, v2026.11.02
 
 Free data from Citizen Wire (citizenwire.org) on every recorded roll call of the Des Moines City Council, from the official minutes. Licensed CC BY 4.0.
 
 ## What's included
-- Coverage: regular City Council meetings from 2026-01-12 to 2026-10-19.
+- Coverage: regular City Council meetings from 2026-01-12 to 2026-10-21.
 - Formats: one CSV per table (`csv/`), one Parquet file per table (`parquet/`), and all tables in one SQLite file (`citizenwire-des-moines.sqlite`).
 - Field definitions: `DATA-DICTIONARY.md`. File checksums: `SHA256SUMS`.
 
 | Table | Rows |
 |---|---|
 | bodies | 1 |
-| meetings | 18 |
-| items | 1,156 |
-| matters | 1,085 |
-| matter_actions | 1,156 |
-| motions | 1,159 |
-| member_votes | 7,854 |
-| attendance | 126 |
+| meetings | 20 |
+| items | 1,169 |
+| matters | 1,098 |
+| matter_actions | 1,169 |
+| motions | 1,170 |
+| member_votes | 7,912 |
+| attendance | 139 |
 | officials | 7 |
 | terms | 7 |
-| sources | 1,245 |
+| sources | 1,262 |
 | corrections | 35 |
-| id_crosswalk | 1,086 |
+| id_crosswalk | 1,088 |
 
 ## How to credit
 > Data: Citizen Wire (citizenwire.org), CC BY 4.0

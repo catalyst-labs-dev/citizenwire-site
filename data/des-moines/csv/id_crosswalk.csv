@@ -1,4 +1,6 @@
 entity,old_id,new_id,since,reason
+motion,ia-des-moines-council:2026-08-24:4:m2,ia-des-moines-council:2026-08-24:4(I):m1,2026-10-23,sub-item 4-I. liquor license roll call now parsed as its own item 4(I) instead of a second motion on item 4
+motion,ia-des-moines-council:2026-09-14:4:m2,ia-des-moines-council:2026-09-14:4(I):m1,2026-10-23,sub-item 4-I. liquor license roll call now parsed as its own item 4(I) instead of a second motion on item 4
 matter,ia-des-moines-council:appointment:26-0001,ia-des-moines-council:matter:26-0001,2026-10-22,matter ids no longer include the matter kind
 matter,ia-des-moines-council:appointment:26-0007,ia-des-moines-council:matter:26-0007,2026-10-22,matter ids no longer include the matter kind
 matter,ia-des-moines-council:appointment:26-0061,ia-des-moines-council:matter:26-0061,2026-10-22,matter ids no longer include the matter kind

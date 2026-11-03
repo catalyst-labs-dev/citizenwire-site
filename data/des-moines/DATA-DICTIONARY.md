@@ -1,4 +1,4 @@
-# Data dictionary, v2026.10.22
+# Data dictionary, v2026.11.02
 
 Types: `text`, `integer`, `real` (decimal number), `date` (YYYY-MM-DD), `datetime` (ISO 8601 with UTC offset). An empty cell in CSV, or null in Parquet or SQLite, means the field does not apply or the record does not give it, unless a row below says otherwise. Allowed values are listed in full.
 
