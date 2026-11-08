@@ -224,7 +224,7 @@ header.top a:focus-visible,.sbox summary:focus-visible,.search input:focus-visib
 a.pcard:hover,a.pcard:focus-visible{border-color:currentColor}
 .pcard b{white-space:nowrap;font-size:17px;flex-basis:100%}.pcard .meta{white-space:nowrap}.pcard .pc{white-space:nowrap;font-size:14px;font-weight:600}
 .pcard.off{opacity:.65}
-.box ul.nlist,.nlist{list-style:none;padding:0;margin:0 0 var(--s3)}.nlist li{margin:0 0 10px}.nlist b{white-space:nowrap}
+.box ul.nlist,.nlist,.lmlist{list-style:none;padding:0;margin:0 0 var(--s3)}.nlist li,.lmlist li{margin:0 0 10px}.nlist b,.lmlist b{white-space:nowrap}
 /* What this means (glossary explainers) */
 .wtm-s{padding-top:0}.wtm{border:1px solid var(--line);border-left:4px solid var(--g);border-radius:var(--r);padding:var(--s4,14px) var(--s5,16px);background:var(--bg);max-width:68ch}
 .wtm .label{white-space:nowrap}.wtm dl{margin:8px 0 4px}.wtm dt{font-weight:700;margin-top:8px}.wtm dd{margin:2px 0 0}.wtm .meta{margin:8px 0 0}
